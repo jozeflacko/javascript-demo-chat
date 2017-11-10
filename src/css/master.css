@@ -1,0 +1,92 @@
+html, body {
+  margin:0px;
+  padding:0px;
+}
+.j-baby-chat {
+  background:#ffffff;
+  max-width:1000px;
+  position:fixed;
+  height:100%;
+  width:100%;
+}
+
+/* INTERFACE */
+div.j-interface {
+  position:absolute;
+  bottom:30px;
+  border-top:1px solid #DDD;
+  width:100%;
+  padding:10px 10px;
+}
+div.j-baby-chat #j-input {
+  padding:10px;
+  border:1px solid #DDD;
+  min-width:400px;
+}
+div.j-baby-chat #j-btn-clear-chat {
+  padding:10px;
+  border:1px solid #DDD;
+  background:#76d474;
+}
+div.j-baby-chat #j-btn-destroy-brain {
+  padding:10px;
+  border:1px solid #DDD;
+  background:#ffc8c8;
+}
+
+/* TABLE */
+.j-conversation {
+  width:100%;
+  text-align:left;
+  position:absolute;
+  bottom:0px;
+  height:100%;
+
+  vertical-align:bottom;
+}
+.j-conversation #j-chat {
+  position:absolute;
+  margin-bottom: 120px;
+  width:100%;
+  bottom:0px;
+}
+.j-conversation #j-chat th,
+.j-conversation #j-chat td {
+  padding:5px;
+  width:50%;
+}
+
+.j-conversation #j-chat .bot:not(:empty),
+.j-conversation #j-chat .me:not(:empty) {
+  padding:10px;
+  background:#b4dffd;
+  position:relative;
+  z-index:1;
+  padding-bottom:20px;
+}
+.j-conversation #j-chat .bot:not(:empty):before,
+.j-conversation #j-chat .me:not(:empty):before  {
+  padding:10px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+  background:inherit;
+  content:"";
+  display:block;
+  position:absolute;
+  width:5px;
+  height:5px;
+  bottom:-5px;
+  right:15px;
+  z-index:0;
+}
+.j-conversation #j-chat .me:not(:empty) {
+  background:#f3c2b8;
+}
+.j-conversation #j-chat .me:not(:empty):before {
+  right:initial;
+  left:15px;
+}
+.j-conversation #j-chat .bot + .bot {
+  margin-top:-22px;
+}
